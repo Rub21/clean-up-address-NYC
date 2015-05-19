@@ -6,9 +6,14 @@ Based in OverPass:
 
 
 I've done a script to make URLs from all places where is a special-co(A,B) address.
+
 I did a grid for  special-co-A
 
+https://github.com/Rub21/clean-up-address-NYC/blob/master/grid-a-NYC.geojson
+
 and special-co-B
+
+https://github.com/Rub21/clean-up-address-NYC/blob/master/grid-b-NYC.geojson
 
 and to get all URLS, run the nex script
 
