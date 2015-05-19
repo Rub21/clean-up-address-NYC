@@ -1,17 +1,14 @@
 # Clean up special_co adrees(A,B) in NYC
 
 ## 
-I've done a script to make URLs from all places where is a special-co(A,B) address.
+I've done a script to make URL's from all places where  there are  special-co(A,B) address.
 
-I did a grid for   special_co(A)
+Grid for  
 
-https://github.com/Rub21/clean-up-address-NYC/blob/master/grid-a-NYC.geojson
+- [special_co(A)](https://github.com/Rub21/clean-up-address-NYC/blob/master/grid-a-NYC.geojson)
 
-and  special_co(B)
+- [special_co(B)](https://github.com/Rub21/clean-up-address-NYC/blob/master/grid-b-NYC.geojson)
 
-https://github.com/Rub21/clean-up-address-NYC/blob/master/grid-b-NYC.geojson
-
-and to get all URLS, run the nex script
 
 ## How to run
 
@@ -36,7 +33,7 @@ and to get all URLS, run the nex script
 Copy the text from each csv file and paste in a ticked. 
 
 
-now click in one of then URL in ticked.  will be download the special_co (A) and special_co(B) in JOSM.
+Click a URL in ticked.  it will be download the objects with special_co (A) and special_co(B) in JOSM.
 
 and use the next maps in backgroud to fix the adress.
 
