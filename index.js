@@ -1,8 +1,7 @@
 var fs = require('fs');
 var _ = require('underscore');
 var argv = require('optimist').argv;
-var csv = require('csv-parser')
-
+var csv = require('csv-parser');
 var spreadsheets = [];
 var grid = JSON.parse(fs.readFileSync(argv.geofile, 'utf8'));
 _.each(grid.features, function(val) {
@@ -11,7 +10,7 @@ _.each(grid.features, function(val) {
 
 function get_url(val) {
 	var urls = [];
-	var url = 'http://127.0.0.1:8111/import?url=http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:xml][timeout:25];(';
+	var url = 'http://127.0.0.1:8111/import?url=http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:xml][timeout:50];(';
 	var counter = 0;
 	var rqt = fs.createReadStream(argv.csvfile)
 		.pipe(csv())
@@ -31,14 +30,11 @@ function get_url(val) {
 				if (counter === 20) {
 					url += ');out meta;>;out meta qt;';
 					urls.push(url);
-					url = 'http://127.0.0.1:8111/import?url=http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:xml][timeout:25];(';
+					url = 'http://127.0.0.1:8111/import?url=http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:xml][timeout:50];(';
 					counter = 0;
 				}
-
 			}
-
 		});
-
 
 	rqt.on('finish', function() {
 		url += ');out meta;>;out meta qt;';
@@ -52,7 +48,6 @@ function get_url(val) {
 				if (val.properties.id > 300 && val.properties.id <= 400) fs.appendFile(argv.csvfile.split('.')[0] + "-urls-4.csv", text, function(err) {});
 				if (val.properties.id > 400) fs.appendFile(argv.csvfile.split('.')[0] + "-urls-5.csv", text, function(err) {});
 			}
-
 		};
 	});
 }
