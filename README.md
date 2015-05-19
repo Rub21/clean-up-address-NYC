@@ -49,8 +49,10 @@ and use the next maps in backgroud to fix the adress.
 
 # How to work
 
-- If the url download poins as adrees, remove these points and upload the change
+when you download the data:
 
-- If the url download buildings as way or relation, remove  the tag `addr:housenumber` and `addr:street` and upload the change
+- If the osm objects are/is points as address, remove these points and upload the change or if these point  has a other tag added by users, just remove the tag `addr:housenumber` and `addr:street` 
 
-- If the URL does not give you any data,, it is because is not any special_co(A,B) address in that place.
+- If the  osm objects   are ways or relation (buildings), remove  the tag `addr:housenumber` and `addr:street` and upload the change
+
+-  If the URL does not give you any data, it is because there is not  any special_co(A,B) address in download place 
